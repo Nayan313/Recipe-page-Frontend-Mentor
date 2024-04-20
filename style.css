@@ -1,0 +1,140 @@
+@font-face {
+    font-family: Outfit;
+    src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: young_serif;
+    src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main: hsl(158, 36%, 37%);
+    --back: hsl(30, 38%, 92%);
+    --White: hsl(0, 0%, 100%);
+    --Rose-White: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --Light-Grey: hsl(30, 18%, 87%);
+    --Wenge-Brown: hsl(30, 10%, 34%);
+    --Dark-Charcoal: hsl(24, 5%, 18%);
+    --Secondary-title: #764237;
+}
+
+body {
+    background-color: var(--Rose-White);
+    font-family: Outfit;
+    color: var(--Wenge-Brown);
+}
+::selection{
+    background-color: #692a43;
+    color: white;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.attribution a {
+    color: hsl(332, 95%, 16%);
+}
+
+.card {
+    width: 50%;
+    margin: 10vh auto;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    background-color: var(--White);
+}
+
+.card>.img-card {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card>.img-card>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card .main_title{
+    padding-bottom: 10px;
+}
+.card .main_title,
+.card .title {
+    font-family: young_serif;
+}
+
+.card .title {
+    color: var(--Secondary-title);
+}
+
+.card .inCard {
+    padding: 20px 0 10px 0;
+}
+
+
+.card ul li {
+    margin: 15px 0;
+    list-style-position: inside;
+}
+
+.card .preparation-card {
+    background-color: #ffe5f5;
+    padding: 20px 20px 10px 20px;
+    margin: 30px 0 0 0;
+    border-radius: 8px;
+}
+.card .bottBorder{
+    border-bottom: 1px solid var(--Light-Grey);
+}
+.card .preparation-card h3 {
+    color: #692a43;
+}
+
+.card .instruction ul{
+    padding: 0 0 0 20px;
+}
+.card .instruction li {
+    list-style: decimal;
+    list-style-position: outside;
+}
+
+.card .instruction li::marker {
+    margin-left: 10px;
+    color: #692a43;
+}
+.card table{
+    width: 100%;
+}
+.card .tableSec p{
+    padding: 10px 0;
+}
+.card table td{
+    height: 32px;
+    padding: 10px;
+    border-bottom: 1px solid var(--Light-Grey);
+}
+.card table td:last-child{
+    color: #692a43;
+    font-weight: 700;
+}
+@media (max-width: 375px) {
+    .card{
+        width: 95%;
+        padding: 2.5%;
+        border-radius: 0;
+        margin: 0;
+    }
+}
